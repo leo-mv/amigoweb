@@ -1,0 +1,83 @@
+.select
+  margin-bottom: 34px
+
+  &.active
+    .select_button
+      border: 1px solid transparent
+      &::before
+        opacity: 1
+    .select_dropdown
+      display: block
+
+  .select_title
+    font-weight: 500
+    font-size: 16px
+    line-height: 21px
+    color: #756F86
+    margin-bottom: 7px
+
+  .select_container
+    position: relative
+
+  .select_button
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04)
+    position: relative
+    z-index: 1
+    border-radius: 6px
+    height: 52px
+    width: 100%
+    font-size: 16px
+    line-height: 21px
+    color: #2C2738
+    padding: 0 16px
+    border: 1px solid #DBE2EA
+    user-select: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+    +tr
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      border-radius: 6px
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      border: 2px solid #0880AE
+      opacity: 0
+      z-index: -1
+      +tr
+    &::after
+      content: '\e901'
+      font-family: icons
+      color: #0880AE
+      font-size: 30px
+
+  .select_dropdown
+    background: #FFFFFF
+    border: 1px solid #DBE2EA
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04)
+    border-radius: 6px
+    position: absolute
+    width: 100%
+    padding: 12px 0
+    top: 56px
+    display: none
+    z-index: 10
+
+  .select_option
+    width: 100%
+    height: 44px
+    line-height: 21px
+    color: #756F86
+    display: flex
+    align-items: center
+    padding: 0 15px
+    user-select: none
+    cursor: pointer
+    +tr
+    &:hover
+      background: #EBF4F8

@@ -1,0 +1,46 @@
+.checkbox_container
+  display: flex
+  align-items: center
+  margin-bottom: 38px
+  cursor: pointer
+  &.active
+    .checkbox
+      border: 1px solid transparent
+      &::before
+        opacity: 1
+
+  .checkbox
+    +wh(28px)
+    background: #FFFFFF
+    border: 1px solid #DBE2EA
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04)
+    border-radius: 4px
+    margin-right: 8px
+    position: relative
+    &::before
+      content: '\e900'
+      +flex
+      font-size: 24px
+      font-family: icons
+      color: #0880AE
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      border-radius: 4px
+      opacity: 0
+      border: 2px solid #0880AE
+      +tr
+
+  .checkbox_placeholder
+    font-weight: 500
+    font-size: 16px
+    line-height: 21px
+    color: #756F86
+    flex: 1
+    user-select: none
+    a 
+      color: #0880ae
+      &:hover
+        text-decoration: underline

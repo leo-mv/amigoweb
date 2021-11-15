@@ -1,0 +1,59 @@
+.input_group
+  width: 100%
+  margin-bottom: 8px
+
+  .input_title
+    font-weight: 500
+    font-size: 16px
+    line-height: 21px
+    color: #756F86
+    margin-bottom: 7px
+    user-select: none
+
+  .input_error
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: #FF7171
+    min-height: 18px
+
+  .input_container
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04)
+    position: relative
+    z-index: 1
+    margin-bottom: 8px
+    border-radius: 6px
+
+  input
+    height: 52px
+    width: 100%
+    background: transparent
+    font-size: 16px
+    line-height: 21px
+    color: #2C2738
+    outline: none
+    padding: 0 16px
+    border: 1px solid #DBE2EA
+    border-radius: 6px
+    +tr
+    &::placeholder
+      font-size: 16px
+      line-height: 21px
+      color: #7C9CBF
+    &:focus
+      border: 1px solid transparent
+    &:focus + .input_border
+      opacity: 1
+
+  .input_border
+    display: block
+    position: absolute
+    border-radius: 6px
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    border: 2px solid #0880AE
+    opacity: 0
+    z-index: -1
+    +tr
